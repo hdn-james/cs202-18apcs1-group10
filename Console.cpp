@@ -1,6 +1,7 @@
 #include "Console.h"
+using namespace std;
 
-void FixConsoleWindow() 
+void FixConsoleWindow()
 {
 	HWND consoleWindow = GetConsoleWindow();
 	LONG style = GetWindowLong(consoleWindow, GWL_STYLE);
@@ -8,7 +9,7 @@ void FixConsoleWindow()
 	SetWindowLong(consoleWindow, GWL_STYLE, style);
 }
 
-void GotoXY(int x, int y) 
+void GotoXY(int x, int y)
 {
 	COORD coord;
 	coord.X = x;

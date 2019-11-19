@@ -1,6 +1,7 @@
-#pragma once
+#ifndef PEOPLE_H
+#define PEOPLE_H
 
-#include<iostream>
+#include <iostream>
 #include "Animal.h"
 #include "Vehicle.h"
 using namespace std;
@@ -15,8 +16,10 @@ public:
 	void Left(int);
 	void Right(int);
 	void Down(int);
-	bool isImpact(const CVEHICLE*&);
-	bool isImpact(const CANIMAL*&);
+	bool isImpact(const CVEHICLE *&);
+	bool isImpact(const CANIMAL *&);
 	bool isFinish();
 	bool isDead();
 };
+
+#endif /* People.h */

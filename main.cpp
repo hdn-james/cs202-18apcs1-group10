@@ -1,13 +1,13 @@
-#include<iostream>
-#include<stdio.h>
-#include<thread>
-#include<stdlib.h>
-#include<windows.h>
+#include <iostream>
+#include <stdio.h>
+#include <thread>
+#include <stdlib.h>
+#include <windows.h>
 using namespace std;
 
-void exitGame(thread* t)
+void exitGame(thread *t)
 {
-	system(“cls”);
+	system(ï¿½clsï¿½);
 	IS_RUNNING = false;
 	t->join();
 }
@@ -27,8 +27,9 @@ void ThreadFunc1()
 			int temp = toupper(getch());
 			//...
 			if (temp == 27)
-			{// nguoi dung muon thoat
-				exitGame(&t1); return;
+			{ // nguoi dung muon thoat
+				exitGame(&t1);
+				return;
 			}
 			//...
 		}
