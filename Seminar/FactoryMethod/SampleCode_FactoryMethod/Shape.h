@@ -1,6 +1,8 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+#include <iostream>
+
 class Point
 {
 private:
@@ -17,6 +19,7 @@ public:
 class Shape
 {
 public:
+    static Shape *initShape(int);
     virtual void input() = 0;
     virtual float calcArea() = 0;
 };

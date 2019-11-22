@@ -5,8 +5,6 @@
 #include <vector>
 
 #include "Shape.h"
-#include "Circle.h"
-#include "Rectangle.h"
 
 class ShapeArray
 {
