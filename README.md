@@ -1,5 +1,8 @@
-# [CS202]: PROJECT - CROSSROAD
-Lớp CPEOPLE // Phạm Quốc Huy
-Huỳnh Đại Nhân: 
-    Vehicle + TrafficLight
+# CS202 - 18APCS1 - GROUP10
+
+# Contributors:
+        Huỳnh Đại Nhân
+        Phạm Quốc Huy
+        Mai Hoàng Nhi
+
     
