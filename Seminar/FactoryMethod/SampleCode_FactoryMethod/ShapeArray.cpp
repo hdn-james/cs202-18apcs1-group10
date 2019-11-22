@@ -16,9 +16,9 @@ void ShapeArray::input()
             cin >> type;
         } while (type < 1 || type > 2);
         if (type == 1)
-            p = new Rectangle;
+            p = Shape::initShape(type);
         else if (type == 2)
-            p = new Circle;
+            p = Shape::initShape(type);
         cin.ignore(1);
         p->input();
         shape.push_back(p);

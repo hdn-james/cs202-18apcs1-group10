@@ -1,4 +1,6 @@
 #include "Shape.h"
+#include "Circle.h"
+#include "Rectangle.h"
 using namespace std;
 
 Point::Point(float x, float y)
@@ -19,12 +21,11 @@ void Point::set(float x, float y)
     this->y = y;
 }
 
-void Shape::input()
+Shape *Shape::initShape(int type)
 {
-    return;
-}
-
-float Shape::calcArea()
-{
-    return 0;
+    if (type == 1)
+        return new Rectangle;
+    else if (type == 2)
+        return new Circle;
+    else return nullptr;
 }
