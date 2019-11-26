@@ -1,4 +1,6 @@
 #include "menu.h"
+
+#include "GraphicsHandler.h"
 using namespace std;
 
 menuFunction::menuFunction()
@@ -9,7 +11,7 @@ menuFunction::menuFunction()
     MENU.push_back("SETTING");
     MENU.push_back("EXIT");
     hideCursor();
-    drawMenu();
+    drawMainMenu();
 }
 
 menuFunction::~menuFunction()
@@ -18,7 +20,7 @@ menuFunction::~menuFunction()
     deleteMenu();
 }
 
-void menuFunction::drawMenu()
+void menuFunction::drawMainMenu()
 {
     cout << this->title;
 	drawBorder();
@@ -31,9 +33,9 @@ void menuFunction::drawMenu()
 
 void menuFunction::deleteMenu()
 {
-    for (int i = 1; i < 153; i++)
+    for (int i = 1; i < Y_MAX - 1; i++)
     {
-        for (int j = 0; j < 37; j++)
+        for (int j = 0; j < Y_MAX; j++)
         {
             GotoXY(i, j);
             cout << " ";
@@ -70,21 +72,21 @@ void menuFunction::drawBorder()
     char a = 201, b = 205, c = 187; // ╔ ═ ╗
     GotoXY(0, 0);
     cout << a;
-    for (int i = 1; i < (154); i++)
+    for (int i = 1; i < (X_MAX); i++)
     {
         cout << b;
     }
     cout << c;
     char d = 186, e = 200, f = 188; // ║ ╚ ╝
-    for (int i = 1; i < 37; i++)
+    for (int i = 1; i < Y_MAX; i++)
     {
         GotoXY(0, i);
         cout << d;
-        GotoXY(154, i);
+        GotoXY(X_MAX, i);
         cout << d;
     }
     cout << e;
-    for (int i = 1; i < (154); i++)
+    for (int i = 1; i < (X_MAX); i++)
     {
         cout << b;
     }
