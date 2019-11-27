@@ -2,65 +2,72 @@
 #include "GraphicsHandler.h"
 using namespace std;
 
-void CANIMAL::moveLeft(int x, int y) {}
 
-void CANIMAL::moveRight(int x, int y) {}
+void CANIMAL::moveLeft(int x) {}
 
-void CANIMAL::deleteObject(int x, int y)
+void CANIMAL::moveRight(int x) {}
+
+void CANIMAL::deleteObject()
 {
-    GotoXY(x, y);
+    GotoXY(mX, mY);
     cout << "   ";
 }
 
 CDINAUSOR::CDINAUSOR()
 {
-    dinausorToLeft.push_back(c);
-    dinausorToLeft.push_back(a);
-    dinausorToLeft.push_back(b);
-    dinausorToRight.push_back(b);
-    dinausorToRight.push_back(a);
-    dinausorToRight.push_back(c);
+    this->dinausorToLeft.push_back(c);
+    this->dinausorToLeft.push_back(a);
+    this->dinausorToLeft.push_back(b);
+    this->dinausorToRight.push_back(b);
+    this->dinausorToRight.push_back(a);
+    this->dinausorToRight.push_back(c);
 }
 
-void CDINAUSOR::moveLeft(int x, int y)
+void CDINAUSOR::moveLeft(int x)
 {
-    deleteObject(x, y);
-    GotoXY(x - 1, y);
-    cout << dinausorToLeft;
+    deleteObject();
+    this->mX -= x;
+    GotoXY(this->mX, this->mY);
+    cout << this->dinausorToLeft;
 }
 
-void CDINAUSOR::moveRight(int x, int y)
+void CDINAUSOR::moveRight(int x)
 {
-    deleteObject(x, y);
-    GotoXY(x + 1, y);
-    cout << dinausorToRight;
+    deleteObject();
+    this->mX += x;
+    GotoXY(this->mX, this->mY);
+    cout << this->dinausorToRight;
 }
 
-void CDINAUSOR::deleteObject(int x, int y)
+void CDINAUSOR::deleteObject()
 {
-    CANIMAL::deleteObject(x, y);
+    CANIMAL::deleteObject();
 }
 
 CBIRD::CBIRD()
 {
-    bird.push_back(a);
-    bird.push_back(b);
-    bird.push_back(a);
+    this->bird.push_back(a);
+    this->bird.push_back(b);
+    this->bird.push_back(a);
 }
 
-void CBIRD::moveLeft(int x, int y) {
-    deleteObject(x, y);
-    GotoXY(x - 1, y);
-    cout << bird;
-}
-
-void CBIRD::moveRight(int x, int y) {
-    deleteObject(x, y);
-    GotoXY(x + 1, y);
-    cout << bird;
-}
-
-void CBIRD::deleteObject(int x, int y)
+void CBIRD::moveLeft(int x)
 {
-    CANIMAL::deleteObject(x, y);
+    deleteObject();
+    this->mX -= x;
+    GotoXY(this->mX, this->mY);
+    cout << this->bird;
+}
+
+void CBIRD::moveRight(int x)
+{
+    deleteObject();
+    this->mX += x;
+    GotoXY(this->mX, this->mY);
+    cout << this->bird;
+}
+
+void CBIRD::deleteObject()
+{
+    CANIMAL::deleteObject();
 }
