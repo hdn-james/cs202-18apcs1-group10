@@ -10,25 +10,26 @@ menuFunction::menuFunction()
     MENU.push_back("LOAD GAME");
     MENU.push_back("SETTING");
     MENU.push_back("EXIT");
-    hideCursor();
-    drawMainMenu();
 }
 
 menuFunction::~menuFunction()
 {
-    hideCursor();
-    deleteMenu();
+    //deleteMenu();
 }
 
 void menuFunction::drawMainMenu()
 {
     cout << this->title;
-	drawBorder();
-	TextColor(Color_Cyan);
-	for (int i = 0; i < numOfItems; i++) {
-		GotoXY(70, i * 2 + 15);
-		cout << MENU[i];
-	}
+    drawBorder();
+    TextColor(Color_Cyan);
+    for (int i = 0; i < numOfItems; i++)
+    {
+        GotoXY(70, i * 2 + 18);
+        cout << MENU[i];
+    }
+    TextColor(Color_Red);
+    credit();
+    TextColor(default_Color);
 }
 
 void menuFunction::deleteMenu()
@@ -91,4 +92,99 @@ void menuFunction::drawBorder()
         cout << b;
     }
     cout << f;
+}
+
+void menuFunction::credit()
+{
+    GotoXY((X_MAX - 55) / 2, Y_MAX - 3);
+    cout << "Author: Huynh Dai Nhan - Mai Hoang Nhi - Pham Quoc Huy";
+}
+
+void menuFunction::arrow(int x, int y)
+{
+    GotoXY(67, 18);
+    cout << " ";
+    GotoXY(67, 20);
+    cout << " ";
+    GotoXY(67, 22);
+    cout << " ";
+    GotoXY(67, 24);
+    cout << " ";
+    char a = 175;
+    GotoXY(x, y);
+    cout << a;
+}
+
+int menuFunction::choice()
+{
+    arrow(67, 18);
+    int c;
+    c = getMove();
+    while (c == 0)
+    {
+        c = getMove();
+    }
+    do
+    {
+        if (c == 5)
+            return 4;
+        if (whereY() == 18)
+        {
+            c = getMove();
+            while (c == 0)
+            {
+                c = getMove();
+            }
+            if (c == 6)
+                return 1;
+            if (c == 2 || c == 4)
+                arrow(67, 20);
+            if (c == 1 || c == 3)
+                arrow(67, 24);
+        }
+        if (whereY() == 20)
+        {
+            c = getMove();
+            while (c == 0)
+            {
+                c = getMove();
+            }
+            if (c == 6)
+                return 2;
+            if (c == 2 || c == 4)
+                arrow(67, 22);
+            if (c == 1 || c == 3)
+                arrow(67, 18);
+        }
+        if (whereY() == 22)
+        {
+            c = getMove();
+            while (c == 0)
+            {
+                c = getMove();
+            }
+            if (c == 6)
+                return 3;
+            if (c == 2 || c == 4)
+                arrow(67, 24);
+            if (c == 1 || c == 3)
+                arrow(67, 20);
+        }
+        if (whereY() == 24)
+        {
+            c = getMove();
+            while (c == 0)
+            {
+                c = getMove();
+            }
+            if (c == 6)
+                return 4;
+            if (c == 2 || c == 4)
+                arrow(67, 18);
+            if (c == 1 || c == 3)
+                arrow(67, 22);
+        }
+    } while (c != 0);
+
+    return -1;
 }

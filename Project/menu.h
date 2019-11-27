@@ -26,11 +26,13 @@ private:
 public:
 	menuFunction();
 	~menuFunction();
-	
+
 	void drawMainMenu();
 	void deleteMenu();
 	void drawBorder();
 	void credit();
+	void arrow(int, int);
+	int choice();
 };
 
 int getMove();

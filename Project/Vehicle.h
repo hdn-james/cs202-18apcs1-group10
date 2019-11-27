@@ -8,12 +8,13 @@ using namespace std;
 
 class CVEHICLE
 {
+protected:
 	int mX, mY;
 
 public:
-	virtual void moveLeft(int, int);
-	virtual void moveRight(int, int);
-	virtual void deleteObject(int, int);
+	virtual void moveLeft(int);
+	virtual void moveRight(int);
+	virtual void deleteObject();
 };
 
 class CTRUCK : public CVEHICLE
@@ -25,9 +26,9 @@ private:
 
 public:
 	CTRUCK();
-	void moveLeft(int, int);
-	void moveRight(int, int);
-	void deleteObject(int, int);
+	void moveLeft(int);		// move to left (int x)
+	void moveRight(int);	// same as move to left
+	void deleteObject();
 };
 
 class CCAR : public CVEHICLE
@@ -38,9 +39,9 @@ private:
 
 public:
 	CCAR();
-	void moveLeft(int, int);
-	void moveRight(int, int);
-	void deleteObject(int, int);
+	void moveLeft(int);
+	void moveRight(int);
+	void deleteObject();
 };
 
 #endif /* Vehicle.h */

@@ -9,12 +9,13 @@ using namespace std;
 
 class CANIMAL
 {
+protected:
 	int mX, mY;
 
 public:
-	virtual void moveLeft(int, int);
-	virtual void moveRight(int, int);
-	virtual void deleteObject(int, int);
+	virtual void moveLeft(int);
+	virtual void moveRight(int);
+	virtual void deleteObject();
 
 	virtual void Tell();
 };
@@ -28,9 +29,9 @@ private:
 
 public:
 	CDINAUSOR();
-	void moveLeft(int, int);
-	void moveRight(int, int);
-	void deleteObject(int, int);
+	void moveLeft(int);
+	void moveRight(int);
+	void deleteObject();
 
 	virtual void Tell();
 };
@@ -43,9 +44,9 @@ private:
 
 public:
 	CBIRD();
-	void moveLeft(int, int);
-	void moveRight(int, int);
-	void deleteObject(int, int);
+	void moveLeft(int);
+	void moveRight(int);
+	void deleteObject();
 
 	virtual void Tell();
 };
