@@ -2,6 +2,7 @@
 #include "GraphicsHandler.h"
 using namespace std;
 
+
 void CANIMAL::moveLeft(int x) {}
 
 void CANIMAL::moveRight(int x) {}

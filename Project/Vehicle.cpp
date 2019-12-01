@@ -45,7 +45,6 @@ void CTRUCK::deleteObject()
 }
 
 CCAR::CCAR()
-{
     this->car.push_back(a);
     this->car.push_back(b);
     this->car.push_back(b);
