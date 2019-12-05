@@ -5,9 +5,10 @@
 #include <windows.h>
 using namespace std;
 
+/*
 void exitGame(thread *t)
 {
-	system(�cls�);
+	system("cls");
 	IS_RUNNING = false;
 	t->join();
 }
@@ -24,7 +25,7 @@ void ThreadFunc1()
 		thread t1(ThreadFunc1); // tao mot thread phu chay song song voi thread main
 		while (1)
 		{
-			int temp = toupper(getch());
+			int temp = toupper(_getwch());
 			//...
 			if (temp == 27)
 			{ // nguoi dung muon thoat
@@ -34,4 +35,10 @@ void ThreadFunc1()
 			//...
 		}
 	}
+}
+*/
+
+int main()
+{
+	return 0;
 }
