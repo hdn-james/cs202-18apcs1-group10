@@ -1,8 +1,9 @@
-        R RRRRRRRRRRR
-   R   R  RRrrrrrrrrrRR
- R  RR   RRrrrrrrrWWrrrR
-RR R   RR RrrrrrrrWWWwrRRRRR
-  R R R  R RrrrrrrrrrrrrrrrrR
-     R RR RRrNNNrrrrrrNNNrrrR
-      R  RRRRN NRRRRRRN NRRR
+
+        R RRRRRRRRRRRR
+   R   R  RRrrrrrrrrWWRR
+ R  RR   RRrrrrrrrrrWWWWR
+RR R   RR RrrrrrrrrrrrrrRRRRR
+  R R R  R RrrrrrrrrrrrrrrrrrR
+     R RR RRrNNNrrrrrrrNNNrrrR
+      R  RRRRRNWNRRRRRRNWNRRR
              NNN      NNN
