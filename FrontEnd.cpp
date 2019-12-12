@@ -65,11 +65,12 @@ void ChangeText(string &s)
 	{
 		if (s[i] == 'B') ChangeTextColor(3);
 		else if (s[i] == 'b') ChangeTextColor(11);
-		else if (s[i] == 'W') ChangeTextColor(15);
+		else if (s[i] == 'W') ChangeTextColor(11);
+		else if (s[i] == 'D') ChangeTextColor(11);
 		else if (s[i] == 'R') ChangeTextColor(12);
 		else if (s[i] == 'r') ChangeTextColor(13);
 		else if (s[i] == 'Y') ChangeTextColor(14);
-		else if (s[i] == 'N') ChangeTextColor(4);
+		else if (s[i] == 'N') ChangeTextColor(7);
 		else if (s[i] == 'G') ChangeTextColor(2);
 		else if (s[i] == 'g') ChangeTextColor(10);
 		if (s[i] != ' ') s[i] = char(219);
@@ -93,4 +94,26 @@ void DrawObject(const string link, int x, int y)
 	}
 	file.close();
 	return;
+}
+
+void DrawSplashScreen()
+{
+	DrawObject("SS - car.txt", 30, 5);
+	DrawObject("SS - cross the road.txt", 10, 15);
+	DrawObject("SS - loading.txt", 10, 25);
+	string link;
+	for (int i = 1; i <= 4; i++)
+	{
+		Sleep(2500);
+		link = "SS - loading" + to_string(i) + ".txt";
+		DrawObject(link, 10, 25);
+	} 
+}
+
+int main()
+{
+	
+	DrawSplashScreen();
+	system("pause");
+	return 0;
 }

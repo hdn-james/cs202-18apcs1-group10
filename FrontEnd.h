@@ -3,9 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <string.h>
 #include <vector>
 #include <conio.h>
+#include <stdio.h>
 using namespace std;
 
 void ClearFrame(int x, int y, int h, int w);
