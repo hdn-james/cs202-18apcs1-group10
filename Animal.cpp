@@ -13,7 +13,7 @@ void CANIMAL::deleteObject()
 	cout << "   ";
 }
 
-CDINAUSOR::CDINAUSOR()
+/* CDINAUSOR::CDINAUSOR()
 {
 	this->dinausorToLeft.push_back(c);
 	this->dinausorToLeft.push_back(a);
@@ -21,58 +21,47 @@ CDINAUSOR::CDINAUSOR()
 	this->dinausorToRight.push_back(b);
 	this->dinausorToRight.push_back(a);
 	this->dinausorToRight.push_back(c);
-}
+} */
 
-void CDINAUSOR::moveLeft(int x)
+void CDINOSAUR::moveLeft(int x)
 {
 	deleteObject();
 	this->mX -= x;
 	GotoXY(this->mX, this->mY);
-	//cout << this->dinausorToLeft;
-	for (int i = 0; i < this->dinausorToLeft.size(); i++)
-		cout << this->dinausorToLeft[i];
+	DrawObject("dinosaur_left", this->mX, this->mY);
 }
 
-void CDINAUSOR::moveRight(int x)
+void CDINOSAUR::moveRight(int x)
 {
 	deleteObject();
 	this->mX += x;
-	GotoXY(this->mX, this->mY);
-	//cout << this->dinausorToRight;
-	for (int i = 0; i < this->dinausorToRight.size(); i++)
-		cout << this->dinausorToRight[i];
+	DrawObject("dinosaur_right", this->mX, this->mY);
 }
 
-void CDINAUSOR::deleteObject()
+void CDINOSAUR::deleteObject()
 {
 	CANIMAL::deleteObject();
 }
 
-CBIRD::CBIRD()
+/* CBIRD::CBIRD()
 {
 	this->bird.push_back(a);
 	this->bird.push_back(b);
 	this->bird.push_back(a);
-}
+} */
 
 void CBIRD::moveLeft(int x)
 {
 	deleteObject();
 	this->mX -= x;
-	GotoXY(this->mX, this->mY);
-	//cout << this->bird;
-	for (int i = 0; i < this->bird.size(); i++)
-		cout << this->bird[i];
+	DrawObject("bird_left", this->mX, this->mY);
 }
 
 void CBIRD::moveRight(int x)
 {
 	deleteObject();
 	this->mX += x;
-	GotoXY(this->mX, this->mY);
-	//cout << this->bird;
-	for (int i = 0; i < this->bird.size(); i++)
-		cout << this->bird[i];
+	DrawObject("bird_right", this->mX, this->mY);
 }
 
 void CBIRD::deleteObject()

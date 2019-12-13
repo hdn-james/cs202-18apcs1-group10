@@ -11,7 +11,7 @@ void CVEHICLE::deleteObject()
 	cout << "    ";
 }
 
-CTRUCK::CTRUCK()
+/* CTRUCK::CTRUCK()
 {
 	this->truckToLeft.push_back(a);
 	this->truckToLeft.push_back(b);
@@ -21,26 +21,20 @@ CTRUCK::CTRUCK()
 	this->truckToRight.push_back(b);
 	this->truckToRight.push_back(b);
 	this->truckToRight.push_back(a);
-}
+} */
 
 void CTRUCK::moveLeft(int x)
 {
 	deleteObject();
 	this->mX -= x;
-	GotoXY(this->mX, this->mY);
-	//cout << truckToLeft;
-	for (int i = 0; i < truckToLeft.size(); i++)
-		cout << truckToLeft[i];
+	DrawObject("truck - left", this->mX, this->mY);
 }
 
 void CTRUCK::moveRight(int x)
 {
 	deleteObject();
 	this->mX += x;
-	GotoXY(this->mX, this->mY);
-	//cout << truckToRight;
-	for (int i = 0; i < truckToRight.size(); i++)
-		cout << truckToRight[i];
+	DrawObject("truck - right", this->mX, this->mY);
 }
 
 void CTRUCK::deleteObject()
@@ -48,31 +42,26 @@ void CTRUCK::deleteObject()
 	CVEHICLE::deleteObject();
 }
 
-CCAR::CCAR()
+/* CCAR::CCAR()
 {
 	this->car.push_back(a);
 	this->car.push_back(b);
 	this->car.push_back(b);
 	this->car.push_back(a);
-}
+} */
 
 void CCAR::moveLeft(int x)
 {
 	deleteObject();
 	this->mX -= x;
-	GotoXY(this->mX, this->mY);
-	//cout << car;
-	for (int i = 0; i < car.size(); i++)
-		cout << car[i];
+	DrawObject("car", this->mX, this->mY);
 }
 
 void CCAR::moveRight(int x)
 {
 	deleteObject();
 	this->mX += x;
-	GotoXY(this->mX, this->mY);
-	for (int i = 0; i < car.size(); i++)
-		cout << car[i];
+	DrawObject("car", this->mX, this->mY);
 }
 
 void CCAR::deleteObject()

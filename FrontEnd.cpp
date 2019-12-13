@@ -46,6 +46,16 @@ void ClearFrame(int x, int y, int h, int w)
 	return;
 }
 
+void OutputString(string text, int x, int y, bool chosen)
+{
+	if (!chosen)
+		ChangeTextColor(15);
+	else ChangeTextColor(14);
+	CPointer(x, y);
+	cout << text;
+	return;
+}
+
 void CPointer(int x, int y) //Change Pointer
 {
 	COORD pt = { x,y };
@@ -65,12 +75,13 @@ void ChangeText(string &s)
 	{
 		if (s[i] == 'B') ChangeTextColor(3);
 		else if (s[i] == 'b') ChangeTextColor(11);
-		else if (s[i] == 'W') ChangeTextColor(11);
-		else if (s[i] == 'D') ChangeTextColor(11);
-		else if (s[i] == 'R') ChangeTextColor(12);
-		else if (s[i] == 'r') ChangeTextColor(13);
+		else if (s[i] == 'W') ChangeTextColor(15);
+		else if (s[i] == 'D') ChangeTextColor(2);
+		else if (s[i] == 'I') ChangeTextColor(10);
+		else if (s[i] == 'R') ChangeTextColor(4);
+		else if (s[i] == 'r') ChangeTextColor(12);
 		else if (s[i] == 'Y') ChangeTextColor(14);
-		else if (s[i] == 'N') ChangeTextColor(7);
+		else if (s[i] == 'N') ChangeTextColor(3);
 		else if (s[i] == 'G') ChangeTextColor(2);
 		else if (s[i] == 'g') ChangeTextColor(10);
 		if (s[i] != ' ') s[i] = char(219);
@@ -96,24 +107,32 @@ void DrawObject(const string link, int x, int y)
 	return;
 }
 
+void PrStr(const char* text, int x, int y, int color) //prt str
+{
+	ChangeTextColor(color);
+	CPointer(x, y);
+	cout << text;
+	return;
+}
+
 void DrawSplashScreen()
 {
 	DrawObject("SS - car.txt", 30, 5);
-	DrawObject("SS - cross the road.txt", 10, 15);
-	DrawObject("SS - loading.txt", 10, 25);
+	DrawObject("SS - cross the road.txt", 10, 16);
+	DrawObject("SS - loading.txt", 10, 26);
 	string link;
 	for (int i = 1; i <= 4; i++)
 	{
-		Sleep(2500);
+		Sleep(2000);
 		link = "SS - loading" + to_string(i) + ".txt";
-		DrawObject(link, 10, 25);
-	} 
+		DrawObject(link, 10, 26);
+	}
 }
 
-int main()
+void DrawMenu()
 {
-	
-	DrawSplashScreen();
-	system("pause");
-	return 0;
+	DrawObject("menu.txt", 32, 15);
+	PrStr("NEW GAME", 35, 24, 15);
+	PrStr("LOAD GAME", 35, 26, 15);
+	PrStr("SETTINGS", 35, 28, 15);
 }

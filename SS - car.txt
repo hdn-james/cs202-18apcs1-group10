@@ -1,9 +1,8 @@
-
-        B BBBBBBBBBBB
-   B   B  B BB BBBNNBBB
- B  BB   BBBB BBB NNNBBB
-BB B   BB B BBB BBBBBBBBBBBB
-  B B B  B B BBB BBBBBBBBBBBB
-     B BB B BNNNBB BBBNNNBBBB
-      B  BBBBNWN BBBBBNWNBBB
+        R RRRRRRRRRRR
+   R   R  RRrrrrrrrrrRR
+ R  RR   RRrrrrrrrWWrrrR
+RR R   RR RrrrrrrrWWWwrRRRRR
+  R R R  R RrrrrrrrrrrrrrrrrR
+     R RR RRrNNNrrrrrrNNNrrrR
+      R  RRRRN NRRRRRRN NRRR
              NNN      NNN

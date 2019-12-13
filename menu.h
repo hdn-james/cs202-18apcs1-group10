@@ -6,6 +6,7 @@
 #include <vector>
 #include <stdio.h>
 
+#include "FrontEnd.h"
 #include "Console.h"
 using namespace std;
 
@@ -33,6 +34,7 @@ public:
 	void credit();
 	void arrow(int, int);
 	int choice();
+	void showMenu();
 };
 
 int getMove();

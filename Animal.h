@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-
+#include "FrontEnd.h"
 #include "Console.h"
 using namespace std;
 
@@ -20,15 +20,15 @@ public:
 	virtual void Tell();
 };
 
-class CDINAUSOR : public CANIMAL
+class CDINOSAUR : public CANIMAL
 {
 private:
 	char a = 219, b = 220, c = 223; // █ ▄ ▀
-	std::string dinausorToLeft;
-	std::string dinausorToRight;
+	std::string dinosaurToLeft;
+	std::string dinosaurToRight;
 
 public:
-	CDINAUSOR();
+	CDINOSAUR();
 	void moveLeft(int);
 	void moveRight(int);
 	void deleteObject();

@@ -188,3 +188,50 @@ int menuFunction::choice()
 
 	return -1;
 }
+
+void menuFunction::showMenu()
+{
+	DrawMenu(); int c; int pos = 0;
+	while (1)
+	{
+		c = getMove();
+		if (c == 2) 
+			if (pos < 3) pos++;
+		if (c == 1)
+			if (pos > 1) pos--;
+		if (pos == 1)
+		{
+			OutputString("NEW GAME", 35, 24, true);
+			OutputString("LOAD GAME", 35, 26, false);
+			OutputString("SETTINGS", 35, 28, false);
+		} 
+		else if (pos == 2)
+		{
+			OutputString("NEW GAME", 35, 24, false);
+			OutputString("LOAD GAME", 35, 26, true);
+			OutputString("SETTINGS", 35, 28, false);
+		}
+		else if (pos == 3)
+		{
+			OutputString("NEW GAME", 35, 24, false);
+			OutputString("LOAD GAME", 35, 26, false);
+			OutputString("SETTINGS", 35, 28, true);
+		}
+
+		/*  if (c == 6)
+		{
+			switch (int(pos))
+			{
+				case 1: //NEW GAME
+			
+				case 2: //LOAD GAME
+
+				case 3: //SETTINGs
+				 
+				default:
+			}
+		} */
+
+		// if (c == 5) exit();
+	}
+}

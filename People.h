@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Animal.h"
 #include "Vehicle.h"
+#include "FrontEnd.h"
 using namespace std;
 
 class CPEOPLE

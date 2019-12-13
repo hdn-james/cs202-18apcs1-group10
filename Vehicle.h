@@ -2,7 +2,7 @@
 #define VEHICLE_H
 
 #include <iostream>
-
+#include "FrontEnd.h"
 #include "Console.h"
 using namespace std;
 

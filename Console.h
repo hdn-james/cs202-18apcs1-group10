@@ -20,8 +20,12 @@
 
 #define default_Color		7
 
-#include <iostream>
-#include <windows.h>
+#include<iostream>
+#include<conio.h>
+#include<windows.h>
+#include<stdio.h>
+#include<iomanip>
+#include<fstream>
 using namespace std;
 
 void FixConsoleWindow();
