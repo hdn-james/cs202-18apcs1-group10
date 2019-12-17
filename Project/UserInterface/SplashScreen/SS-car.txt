@@ -1,0 +1,9 @@
+
+    R       R RRRRRRRRRRRRRRRRR
+R  R  R   R  RRRRrrrrrrrrrrrrrRR
+ R  R  RR   RRRRrrrrrrrrrrrWWrrrR
+R  RR R   RR R RrrrrrrrrrrrWWWwrRRRRR
+  R  R R R  R R RrrrrrrrrrrrrrrrrrrrrR
+R   R   R RR R RBBBrrrrrrrrrrrrBBBrrrR
+   R  R  R  RRRRB BRRRRRRRRRRRRB BRRR
+                BBB            BBB
