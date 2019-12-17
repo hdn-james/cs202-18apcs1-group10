@@ -1,50 +1,29 @@
 #include "People.h"
 
-CPEOPLE::CPEOPLE()
+People::People(int x, int y, int attr)
 {
-	
+    Object::absX = Object::_x = x;
+    Object::absY = Object::_y = y;
+    Object::attr = attr;
+    Object::width = 7;
+    Object::height = 5;
+    Object::show = false;
 }
 
-void CPEOPLE::deleteObject()
+void People::draw()
 {
-	GotoXY(mX, mY);
-	cout << "    ";
+    std::stringstream people;
+    people
+        << char(32) << char(32) << char(222) << char(219) << char(221) << char(32) << char(32) << "\n"
+        << char(220) << char(220) << char(220) << char(219) << char(220) << char(220) << char(220) << "\n"
+        << char(219) << char(222) << char(219) << char(219) << char(219) << char(221) << char(219) << "\n"
+        << char(32) << char(222) << char(219) << char(219) << char(219) << char(221) << char(32) << "\n"
+        << char(32) << char(32) << char(219) << char(32) << char(219) << char(32) << char(32);
+
+    Console::write(Object::_x, Object::_y, people.str(), Object::attr);
+    Object::show = true;
 }
 
-void CPEOPLE::drawPeople()
-{
-	for (int i = 0; i < people.size(); i++)
-		cout << people[i];
-}
+void People::drawReverse() { draw(); }
 
-void CPEOPLE::Up()
-{
-	deleteObject();
-	this->mY -= 1;
-	GotoXY(this->mX, this->mY);
-	drawPeople();
-}
-
-void CPEOPLE::Down()
-{
-	deleteObject();
-	this->mY += 1;
-	GotoXY(this->mX, this->mY);
-	drawPeople();
-}
-
-void CPEOPLE::Left()
-{
-	deleteObject();
-	this->mX -= 1;
-	GotoXY(this->mX, this->mY);
-	drawPeople();
-}
-
-void CPEOPLE::Right()
-{
-	deleteObject();
-	this->mX += 1;
-	GotoXY(this->mX, this->mY);
-	drawPeople();
-}
+int People::type() const { return Object::people; }

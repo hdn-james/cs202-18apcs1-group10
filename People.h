@@ -1,29 +1,17 @@
 #ifndef PEOPLE_H
 #define PEOPLE_H
 
-#include <iostream>
-#include "Animal.h"
-#include "Vehicle.h"
-#include "FrontEnd.h"
-using namespace std;
+#include "Object.h"
 
-class CPEOPLE
+class People : public Object
 {
-	int mX, mY;
-	bool mState; // trang thai song chet
-	string people;
 public:
-	CPEOPLE();
-	void Up();
-	void Left();
-	void Right();
-	void Down();
-	bool isImpact(const CVEHICLE *&);
-	bool isImpact(const CANIMAL *&);
-	bool isFinish();
-	bool isDead();
-	void deleteObject();
-	void drawPeople();
+    People(int x = 0, int y = 0, int attr = 15);
+
+    void draw();
+    void drawReverse();
+    
+    int type() const;
 };
 
-#endif /* People.h */
+#endif // !PEOPLE_H
